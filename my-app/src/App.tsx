@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { TextField } from '@material-ui/core';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Love Calculator</h1>
+      <h2>Enter Your Name</h2>
+      <TextField
+        required
+        id="user-name"
+        label="Enter Your Name"
+        type="text"
+      />
+      <h2>Enter Your Crush's Name</h2>
+      <TextField
+        required
+        id="crush-name"
+        label="Enter Your Crush's Name"
+        type="text"
+      />
     </div>
   );
 }
