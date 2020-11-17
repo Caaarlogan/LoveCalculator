@@ -10,7 +10,7 @@ function Header() {
                 <img
                     alt="loveCalculatorLogo"
                     src={logo}
-                    style={{height:"150px"}}
+                    style={{height:"125px"}}
                 ></img>
             </Grid>
         </Grid>
