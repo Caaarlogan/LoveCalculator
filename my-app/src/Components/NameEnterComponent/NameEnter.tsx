@@ -8,25 +8,25 @@ interface INameEnterProps{
 }
 
 function NameEnter(props: INameEnterProps) {
+    
+    //Your name
     const [UserName, setUserName] = useState<string | null>("");
-
     const handleUserNameChange = (s: string | null) =>{
         setUserName(s);          
     }
-
     const [HasUserFocus, setHasUserFocus] = useState<boolean>(false);
 
+    //The name of your crush
     const [CrushName, setCrushName] = useState<string | null>("");
-
     const handleCrushNameChange = (s: string | null) =>{
         setCrushName(s);          
     }
-    
     const [HasCrushFocus, setHasCrushFocus] = useState<boolean>(false);
 
     //Message to display after pressing button
     const [Message, setMessage] = useState<string | null>("");
 
+    //Function called when button is pressed
     const handleCalculate = () => {
         if (UserName?.length === 0 || UserName === null || UserName === "") {
             setHasUserFocus(true);
