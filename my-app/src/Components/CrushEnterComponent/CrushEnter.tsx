@@ -47,6 +47,10 @@ function CrushEnter(props: INameEnterProps) {
                 crush_Name: CrushName
             }
 
+            const UserNameInput: getCrushNameInstancesProps = {
+                crush_Name: UserName
+            }
+
             const ModifyInput: ModifyProps = {
                 user_Name: UserName,
                 crush_Name: CrushName
@@ -59,7 +63,7 @@ function CrushEnter(props: INameEnterProps) {
 
                 const CrushNameInstances = await getCrushNameInstances(CrushInput);
                 const CrushInstances = await getCrushInstances(ModifyInput);
-                const CrushOnUserInstances = await getCrushOnUserInstances(CrushInput);
+                const CrushOnUserInstances = await getCrushOnUserInstances(UserNameInput);
     
                 setMessage("Out of " + CrushNameInstances + " " + CrushName + "s, " + CrushInstances + " of them have a crush on someone named " + UserName + ". " +
                             CrushOnUserInstances + " people have a crush on someone named " + UserName);
