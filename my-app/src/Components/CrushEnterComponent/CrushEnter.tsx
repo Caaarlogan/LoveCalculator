@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Grid, TextField, Button, Typography } from '@material-ui/core';
 import './CrushEnter.css';
 import { IUserInput } from '../../Common/Interfaces';
+import { getCrushNameInstances, getCrushNameInstancesProps, getCrushInstances, getCrushOnUserInstances, modifyData, ModifyProps} from '../../Api/Api'
 
 interface INameEnterProps{
     SetUserInput: (a: IUserInput) => void;
@@ -41,8 +42,30 @@ function CrushEnter(props: INameEnterProps) {
                 UserName: UserName,
                 CrushName: CrushName
             }
+
+            const CrushInput: getCrushNameInstancesProps = {
+                crush_Name: CrushName
+            }
+
+            const ModifyInput: ModifyProps = {
+                user_Name: UserName,
+                crush_Name: CrushName
+            }
+
             props.SetUserInput(UserInput);
-            setMessage("5 people named " + CrushName + " has a crush on someone named " + UserName);
+
+            const updateValues = async () => {
+                await modifyData(ModifyInput);
+
+                const CrushNameInstances = await getCrushNameInstances(CrushInput);
+                const CrushInstances = await getCrushInstances(ModifyInput);
+                const CrushOnUserInstances = await getCrushOnUserInstances(CrushInput);
+    
+                setMessage("Out of " + CrushNameInstances + " " + CrushName + "s, " + CrushInstances + " of them have a crush on someone named " + UserName + ". " +
+                            CrushOnUserInstances + " people have a crush on someone named " + UserName);
+            }
+
+            updateValues();
         }
     }
 

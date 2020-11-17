@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="love-calculator" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\carbo\\Documents\\Microsoft\ Student\ Accelerator\\2020\ Phase\ 2\ General\\LoveCalculator\\LoveCalculatorAPI\\LoveCalculatorAPI\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
