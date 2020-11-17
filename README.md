@@ -1,6 +1,6 @@
 ﻿# LoveCalculator
 
-Web app that calculates the love between two people by their first name.
+Web app that calculates the love between two people by their first names.
 
 Advanced Features:
 Relational database with relationships between tables
