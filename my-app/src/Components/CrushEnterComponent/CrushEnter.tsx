@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Grid, TextField, Button, Typography } from '@material-ui/core';
-import './NameEnter.css';
+import './CrushEnter.css';
 import { IUserInput } from '../../Common/Interfaces';
 
 interface INameEnterProps{
     SetUserInput: (a: IUserInput) => void;
 }
 
-function NameEnter(props: INameEnterProps) {
+function CrushEnter(props: INameEnterProps) {
     
     //Your name
     const [UserName, setUserName] = useState<string | null>("");
@@ -86,4 +86,4 @@ function NameEnter(props: INameEnterProps) {
     );
 }
 
-export default NameEnter;
+export default CrushEnter;

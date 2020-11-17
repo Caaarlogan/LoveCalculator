@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import NameEnter from './Components/NameEnterComponent/NameEnter';
+import CrushEnter from './Components/CrushEnterComponent/CrushEnter';
 import Header from './Components/Header/Header'
 import { IUserInput } from './Common/Interfaces';
 
@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <Header/>
-      <NameEnter SetUserInput={(a: IUserInput) => SetUserInput(a)}/>
+      <CrushEnter SetUserInput={(a: IUserInput) => SetUserInput(a)}/>
     </div>
   );
 }
