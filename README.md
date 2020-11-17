@@ -17,3 +17,5 @@ Connects to my own API created with .Net CORE 3.1,
 Utilises CRUD operations through the API,
 Uses Material-UI,
 Responsive UI component through the use of Material-UI
+
+Note: You will need to use your own sql database connection string in LoveCalculatorAPI/appsettings.json
